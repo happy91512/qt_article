@@ -1,5 +1,7 @@
+#controller.py
 from PyQt5 import QtWidgets
 from UI import Ui_MainWindow
+from model import factorial_sum
 
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
@@ -12,4 +14,12 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.Button.clicked.connect(self.buttomClicked)
 
     def buttomClicked(self):
-        self.ui.txt.setText("hello")
+        sum = str(factorial_sum())
+        self.ui.ans.setText(sum)
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec_()) 

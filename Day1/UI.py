@@ -17,15 +17,24 @@ class Ui_MainWindow(object):
         MainWindow.resize(800, 600)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.txt = QtWidgets.QTextEdit(self.centralwidget)
-        self.txt.setGeometry(QtCore.QRect(280, 230, 241, 41))
+        self.ans = QtWidgets.QTextEdit(self.centralwidget)
+        self.ans.setGeometry(QtCore.QRect(400, 250, 181, 41))
         font = QtGui.QFont()
         font.setPointSize(16)
-        self.txt.setFont(font)
-        self.txt.setObjectName("txt")
+        self.ans.setFont(font)
+        self.ans.setObjectName("ans")
         self.Button = QtWidgets.QPushButton(self.centralwidget)
-        self.Button.setGeometry(QtCore.QRect(130, 240, 89, 25))
+        self.Button.setGeometry(QtCore.QRect(180, 250, 131, 41))
+        font = QtGui.QFont()
+        font.setPointSize(16)
+        self.Button.setFont(font)
         self.Button.setObjectName("Button")
+        self.qes = QtWidgets.QTextEdit(self.centralwidget)
+        self.qes.setGeometry(QtCore.QRect(340, 250, 61, 41))
+        font = QtGui.QFont()
+        font.setPointSize(16)
+        self.qes.setFont(font)
+        self.qes.setObjectName("qes")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 22))
@@ -41,9 +50,14 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.txt.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        self.ans.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Ubuntu\'; font-size:16pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Hello World!</p></body></html>"))
-        self.Button.setText(_translate("MainWindow", "PushButton"))
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Answer</p></body></html>"))
+        self.Button.setText(_translate("MainWindow", "calculus"))
+        self.qes.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'Ubuntu\'; font-size:16pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">10! = </p></body></html>"))
